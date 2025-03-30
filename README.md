@@ -14,3 +14,9 @@ This selects how many components to keep in the compressed image. If quality=gra
 
 ## Block size
 Defines how many pixels are processed in a single principal component analysis. The pixels are processed line by line from left to right.
+
+## Building
+Easiest way to build is to use Visual Studio 2022 with vcpkg. The project depends on ANGLE, GLM, libpng, WTL and Eigen3.
+
+#### 34% Size reduction
+![alt text](Example.png "34% Size reduction")

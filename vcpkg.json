@@ -1,0 +1,9 @@
+{
+  "dependencies": [
+    "angle",
+    "glm",
+    "libpng",
+    "wtl",
+    "eigen3"
+  ]
+}

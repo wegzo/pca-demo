@@ -47,25 +47,3 @@ int main()
 
     return 0;
 }
-
-//int main()
-//{
-//    EGLBoolean ret = EGL_FALSE;
-//    EGLint eglRet;
-//
-//    const EGLint eglConfigAttrs[] = {
-//        EGL_RED_SIZE, 8,
-//        EGL_GREEN_SIZE, 8,
-//        EGL_BLUE_SIZE, 8,
-//        EGL_ALPHA_SIZE, 8,
-//        EGL_RENDERABLE_TYPE, EGL_OPENGL_ES2_BIT,
-//        EGL_NONE
-//    };
-//    const EGLint eglContextAttrs[] =
-//    {
-//        EGL_CONTEXT_CLIENT_VERSION, 2,
-//        EGL_NONE
-//    };
-//
-//
-//}

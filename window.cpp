@@ -537,8 +537,9 @@ LRESULT ControlsDlg::OnInitDialog(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL&
     this->sliderQualityStatic.Attach(this->GetDlgItem(IDC_STATIC2));
     this->sliderBlockSizeStatic.Attach(this->GetDlgItem(IDC_STATIC3));
 
+    const int granularity = std::pow(2, this->sliderCtrl.GetPos() - 1);
     this->sliderStatic.SetWindowTextW(
-        std::format(L"Compression complexity: {}", this->sliderCtrl.GetPos()).c_str());
+        std::format(L"Compression complexity: {}", granularity).c_str());
     this->sliderQualityStatic.SetWindowTextW(
         std::format(L"Compression level: {}", this->sliderCtrlQuality.GetPos()).c_str());
     this->sliderBlockSizeStatic.SetWindowTextW(
@@ -597,7 +598,7 @@ LRESULT ControlsDlg::OnTrackBarScroll(UINT /*uMsg*/, WPARAM wParam, LPARAM lPara
         ctrlHwnd == this->sliderCtrlBlockSize)
     {
         this->sliderStatic.SetWindowTextW(
-            std::format(L"Compression complexity: {}", this->sliderCtrl.GetPos()).c_str());
+            std::format(L"Compression complexity: {}", granularity).c_str());
         this->sliderQualityStatic.SetWindowTextW(
             std::format(L"Compression level: {}", this->sliderCtrlQuality.GetPos()).c_str());
         this->sliderBlockSizeStatic.SetWindowTextW(

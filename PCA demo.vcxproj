@@ -144,7 +144,6 @@
     <Text Include="HOWTO-vcpkg.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="backup.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pca.cpp" />
     <ClCompile Include="window.cpp" />

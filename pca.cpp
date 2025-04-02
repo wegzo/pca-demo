@@ -157,7 +157,7 @@ bool PCA::processBlock(size_t blockIndex)
     this->compressedByteCount += static_cast<size_t>(std::ceil(bitCount / 8.0));
 
     // get the old data back
-    // (because the feature vector holds unit eigenvectors, then A^-1 = A^T)
+    // (because the feature vector holds eigenvectors(so they are orthogonal), then A^-1 = A^T)
     Eigen::MatrixXd oldData = rowFeatureVector.transpose() * finalData;
     for(auto i = 0; i < oldData.cols(); i++)
         oldData.col(i) += dataMean;
